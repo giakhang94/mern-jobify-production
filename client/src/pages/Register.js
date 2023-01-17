@@ -63,6 +63,9 @@ const Register = () => {
       <form className="form" onSubmit={onSubmit}>
         <Logo />
         <h3>{!value.isMember ? "Register" : "Login"}</h3>
+        <p style={{ fontSize: "12px", textAlign: "center" }}>
+          Demo: Email: tao000@gmail.com - pw: 123456Abc
+        </p>
         {/* name input */}
         {showAlert && <Alert />}
         {!value.isMember && (
