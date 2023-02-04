@@ -1,6 +1,9 @@
 import { StatusCodes } from "http-status-codes";
 const errorHandlerMiddleware = (error, req, res, next) => {
   // console.log(error); bỏ cái này khi deploy
+  if (error) {
+    console.log(error);
+  }
   const defaultError = {
     statusCode: error.statusCode || StatusCodes.INTERNAL_SERVER_ERROR,
     msg: error.message || "something went wrong, try again later",
